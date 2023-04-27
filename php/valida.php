@@ -2,6 +2,15 @@
 <link rel="stylesheet" type="text/css" href="../css/estilo.css">
 
 <?php
+	include 'header.php';
+	echo $cabecalho;
+
+	include 'menu.php';
+	echo $menu;
+
+
+
+
 //declarar variáveis e associar ao conteúdo do formulário
 $nome = $_POST['nome'];
 $login = $_POST['login'];
@@ -50,3 +59,18 @@ if($pass != $repass){
   	</tr>
   </tbody>
 </table>
+
+<?php
+
+	$file = fopen("../bd/registo.txt", "a+");
+	if(file_exists('../bd/registo.txt')){
+	/*	$dados = "Nome: ".$nome."  -  Login: ".$login."  -  Morada: ".$morada."  -  Instagram: ".$instagram."  -  Email: ".$email."  -  NIF: ".$nif."  -  Telefone: ".$telef."  -  Password: ".$pass."\n";
+	*/
+		$dados = $nome."\n".$login."\n".$morada."\n".$instagram."\n".$email."\n".$nif."\n".$telef."\n".$pass."\n";
+		fwrite($file,$dados);
+	}else{
+		echo "<script>alert('Erro ao tentar registar dados no ficheiro');</script>";
+	}
+	fclose($file);
+
+?>

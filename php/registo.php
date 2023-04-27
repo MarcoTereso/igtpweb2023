@@ -11,7 +11,12 @@
 	<?php
 		include 'header.php';
 		echo $cabecalho;
+
 		include 'menu.php';
+		//is_null($path_home);
+		//$path_home = '../index.php';
+		//$path_regiso = 'registo.php';
+		//$path_contatos = 'contatos.php';
 		echo $menu;
 	?>
 	<main>
