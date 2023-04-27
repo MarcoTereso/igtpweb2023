@@ -1,0 +1,21 @@
+#topo{
+	width: 90%;
+	margin-left: 5%;
+	height: 150px;
+}
+#logo{
+	float: left;
+	width: 15%;
+}
+#slogan{
+	float: right;
+	width: 85%;
+	text-align: center;
+}
+#logo img{
+	content:url("../img/logo.jpg");
+}
+#form_registo{
+	width: 60%;
+	margin-left: 20%;
+}
