@@ -73,4 +73,18 @@ if($pass != $repass){
 	}
 	fclose($file);
 
+
+
+
+include 'ligaBD.php';
+$pass = sha1($pass);
+$query = "INSERT INTO user(nome,login,morada,instagram,email,nif,telefone,password) VALUES('$nome','$login','$morada','$instagram','$email','$nif','$telef','$pass')";
+
+if(mysqli_query($liga,$query)){
+  echo "<script>alert('Registo inserido com sucesso!');</script>";
+}else{
+  echo "<script>alert('Erro ao tentar registar dados na BD');</script>";
+}
+mysqli_close($liga);
+
 ?>

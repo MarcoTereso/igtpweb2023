@@ -20,14 +20,10 @@
   	<th>Password</th>
   </thead>
   <tbody>
-
 <?php
-
 $file = fopen("../bd/registo.txt", "a+");
-	if(file_exists('../bd/registo.txt')){
-		
+	if(file_exists('../bd/registo.txt')){		
 		while(!feof($file)){   ?>
-
 			<tr>
 		  		<td><?php echo fgets($file,4096); ?></td>
 		  		<td><?php echo fgets($file,4096); ?></td>
@@ -38,17 +34,12 @@ $file = fopen("../bd/registo.txt", "a+");
 		  		<td><?php echo fgets($file,4096); ?></td>
 		  		<td><?php echo fgets($file,4096); ?></td>
   			</tr>
-
 <?php   }  ?>
-
 		  </tbody>
 		</table>
-
 <?php
-
 	}else{
 		echo "<script>alert('Erro ao tentar abrir o ficheiro');</script>";
 	}
 	fclose($file);
-
 ?>
