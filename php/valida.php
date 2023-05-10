@@ -82,6 +82,7 @@ $query = "INSERT INTO user(nome,login,morada,instagram,email,nif,telefone,passwo
 
 if(mysqli_query($liga,$query)){
   echo "<script>alert('Registo inserido com sucesso!');</script>";
+  echo "<script>window.location='mostraUtilizadoresBD.php';</script>";
 }else{
   echo "<script>alert('Erro ao tentar registar dados na BD');</script>";
 }
