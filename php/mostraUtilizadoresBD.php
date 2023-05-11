@@ -1,6 +1,6 @@
 <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="../css/estilo.css">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <?php
 	include 'header.php';
 	echo $cabecalho;
@@ -20,6 +20,7 @@
   	<th>NIF</th>
   	<th>Telefone</th>
   	<th>Password</th>
+  	<th>Opções</th>
   </thead>
   <tbody>
 
@@ -39,6 +40,7 @@
   		<td><?php echo $row['nif']; ?></td>
   		<td><?php echo $row['telefone']; ?></td>
   		<td><?php echo $row['password']; ?></td>
+  		<td><a href="editaUtilizador.php?id=<?php echo $row['iduser']; ?>"><i class="fa fa-pencil"></i></a>&nbsp;&nbsp;<a href="eliminaUtilizador.php?id=<?php echo $row['iduser']; ?>"><i class="fa fa-trash"></i></a></td>
   	</tr>
 
   <?php    }    ?>
