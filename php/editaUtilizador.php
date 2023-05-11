@@ -13,13 +13,14 @@
 	include 'ligaBD.php'; 
   	$query = "SELECT * FROM user WHERE iduser=$id";
   	$dados = mysqli_query($liga,$query);
+  	$row = mysqli_fetch_assoc($dados);
 ?>
 
 <main>
 		<form class="border border-primary" style="width: 80%; margin-left: 10%" method="POST" action="valida.php">
 			<div class="row">
 				<div class="col">
-					<label for="nome" class="form-label">Nome:</label><input type="text" name="nome" id="nome" placeholder="Insira o seu nome" class="form-control">
+					<label for="nome" class="form-label">Nome:</label><input type="text" name="nome" id="nome" placeholder="Insira o seu nome" class="form-control" value="<?php  echo $row['nome'];  ?>">
 				</div>
 				<div class="col">
 					<label for="login" class="form-label">Login:</label><input type="text" name="login" id="login" class="form-control" placeholder="Insira o seu login">
