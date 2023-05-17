@@ -13,7 +13,7 @@ $lang=array(
 'NIF' => 'NIF',
 'Telefone' => 'Teléfono',
 'Password' => 'contraseña',
-'Opções' => 'opciones'
+'Opcoes' => 'opciones'
 
 );
 
